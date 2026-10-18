@@ -4,16 +4,6 @@ Sprout is a responsive website and app-onboarding concept for people making thei
 
 > **Prototype only:** This project is a design demonstration. It does not verify identities, send SMS or notifications, connect to investment services, or process payments. Use dummy details when exploring the screens.
 
-## View the prototype
-
-### Deploy with Vercel
-
-1. Push this repository to GitHub.
-2. In Vercel, choose **Add New → Project**, then import `Parthwebde12/sprout`.
-3. Keep the project root as the repository root. Vercel uses `vercel.json` to run `npm run build` and serve the static site.
-4. Choose **Deploy**. Vercel will provide a public URL and can redeploy when changes are pushed to GitHub.
-
-The Vercel CLI is not required for this GitHub-based deployment flow.
 
 ### Run locally
 
