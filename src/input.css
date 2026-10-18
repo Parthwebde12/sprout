@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream font-body text-base text-ink;
+    line-height: 1.55;
+  }
+  h1, h2, h3 {
+    @apply font-display text-forest;
+    line-height: 1.15;
+  }
+  :focus-visible {
+    outline: 3px solid #1F4D3A;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-[48px] cursor-pointer items-center justify-center rounded-xl border-2 border-ink bg-gold px-6 font-bold text-ink no-underline shadow-hard;
+  }
+  .btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 #1D2420;
+  }
+  .btn-ghost {
+    @apply border-forest bg-transparent text-forest shadow-none;
+  }
+  .btn-full {
+    @apply w-full;
+  }
+
+  .mark {
+    background: linear-gradient(transparent 62%, #F7D98A 62%);
+  }
+
+  .risk {
+    @apply max-w-[52ch] border-l-[3px] border-gold pl-2.5 text-[13px] leading-snug text-mute;
+  }
+
+  .card {
+    @apply rounded-2xl border-[1.5px] border-line bg-paper p-[18px];
+  }
+
+  .phone {
+    @apply flex min-h-[520px] w-[260px] flex-none snap-start flex-col rounded-[30px] border-2 border-ink bg-paper px-4 py-[18px] shadow-soft;
+  }
+  .phone h3 {
+    @apply my-2 text-xl;
+  }
+  .phone p {
+    @apply text-sm text-mute;
+  }
+
+  .field {
+    @apply mt-1 min-h-[48px] w-full rounded-[10px] border-[1.5px] border-ink bg-cream px-3 text-base;
+  }
+  .field-label {
+    @apply mt-3 block text-[13px] font-semibold;
+  }
+
+  .tiny {
+    @apply my-2 text-xs text-mute;
+  }
+  .tiny-bad {
+    @apply text-danger;
+  }
+  .tiny-good {
+    @apply text-forest;
+  }
+
+  .chip {
+    @apply min-h-[44px] min-w-[44px] cursor-pointer rounded-full border-[1.5px] border-forest bg-transparent px-4 font-semibold text-forest;
+  }
+  .chip-on {
+    @apply bg-forest text-white;
+  }
+
+  .bar {
+    @apply my-2.5 h-2 overflow-hidden rounded bg-line;
+  }
+  .bar i {
+    @apply block h-full rounded bg-leaf;
+  }
+
+  .chk li {
+    @apply flex min-h-[44px] items-center gap-2.5 rounded-[10px] border-[1.5px] border-line p-2.5 text-sm;
+  }
+  .chk span {
+    @apply h-5 w-5 flex-none rounded-full border-2 border-forest;
+  }
+  .chk .done span {
+    @apply bg-forest;
+  }
+}
+
+/* Mascot animation: CSS only, tiny */
+.leaf-l {
+  transform-box: fill-box;
+  transform-origin: 100% 100%;
+  animation: sway 3.6s ease-in-out infinite;
+}
+.leaf-r {
+  transform-box: fill-box;
+  transform-origin: 0 100%;
+  animation: sway 3.6s ease-in-out infinite reverse;
+}
+@keyframes sway {
+  50% { transform: rotate(6deg); }
+}
+
+.bob {
+  animation: bob 2.4s ease-in-out infinite;
+}
+@keyframes bob {
+  50% { transform: translateY(-6px); }
+}
+
+.loading {
+  width: 35%;
+  animation: slide 2s ease-in-out infinite;
+}
+@keyframes slide {
+  0% { margin-left: -35%; }
+  100% { margin-left: 100%; }
+}
+
+/* CSS 3D tilt: no library, JS only sets two angles */
+.tilt {
+  perspective: 700px;
+  touch-action: pan-y;
+}
+.tilt-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+.tilt-shadow {
+  width: 55%;
+  height: 14px;
+  margin: 6px auto 0;
+  border-radius: 50%;
+  background: rgba(29, 36, 32, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

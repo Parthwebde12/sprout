@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sprout: start investing from ₹100</title>
+  <meta name="description" content="Sprout walks first-time investors in India through their first investment, one small step at a time.">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body>
+
+<!-- Mascot, drawn once and reused everywhere -->
+<svg width="0" height="0" class="absolute" aria-hidden="true">
+  <symbol id="sprout" viewBox="0 0 100 112">
+    <path d="M50 38C49 26 47 18 45 10" stroke="#1F4D3A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path class="leaf-l" d="M45 15C29 4 14 11 11 26 27 31 40 27 45 15Z" fill="#5E9E54"/>
+    <path class="leaf-r" d="M46 19C60 4 81 8 85 23 69 33 52 31 46 19Z" fill="#7DB86A"/>
+    <path d="M50 36C79 35 91 60 87 83 83 103 63 108 50 108 37 108 17 103 13 83 9 60 21 37 50 36Z" fill="#E9C98A" stroke="#1D2420" stroke-width="2.5"/>
+    <circle cx="37" cy="68" r="4.5" fill="#1D2420"/>
+    <circle cx="63" cy="69" r="4.5" fill="#1D2420"/>
+    <path d="M41 83Q50 91 59 83" stroke="#1D2420" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="29" cy="79" r="5" fill="#E99A6B" opacity=".6"/>
+    <circle cx="71" cy="80" r="5" fill="#E99A6B" opacity=".6"/>
+  </symbol>
+</svg>
+
+<div class="mx-auto max-w-[1040px] px-5">
+
+  <header class="flex items-center justify-between py-3">
+    <a href="#top" class="flex items-center gap-2 font-display text-[22px] font-bold text-forest no-underline" aria-label="Sprout home">
+      <svg class="h-[34px] w-[30px]" aria-hidden="true"><use href="#sprout"/></svg>
+      Sprout
+    </a>
+    <button id="langBtn" type="button" aria-label="Change language"
+      class="min-h-[44px] min-w-[44px] cursor-pointer rounded-full border-[1.5px] border-forest bg-transparent px-3.5 text-sm font-semibold text-forest">
+      हिं / EN
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="grid items-center gap-3 pb-7 pt-3 md:grid-cols-[1.2fr_.8fr] md:gap-6 md:py-12">
+      <div>
+        <h1 class="mb-3 text-[clamp(1.9rem,6vw,3.4rem)]" data-i18n="h1">Your first investment, <em class="mark not-italic">from just ₹100.</em></h1>
+        <p class="mb-4 max-w-[46ch] text-[1.05rem] text-mute" data-i18n="sub">No jargon, no big amounts. Sprout walks you through it one small step at a time, at your pace.</p>
+        <div class="mb-3.5 flex flex-wrap gap-3">
+          <a class="btn" href="#app" data-i18n="cta">Start with ₹100</a>
+          <a class="btn btn-ghost" href="#how" data-i18n="how">How it works</a>
+        </div>
+        <p class="risk" data-i18n="risk">Investments are subject to market risks. Returns are not assured, and you may lose some or all of your money. Please read all scheme-related documents carefully.</p>
+      </div>
+
+      <div class="relative flex min-h-[130px] items-end justify-center md:min-h-[300px]">
+        <p class="absolute right-[2%] top-0 max-w-[170px] rotate-3 rounded-[14px_14px_14px_2px] border-[1.5px] border-ink bg-paper px-3 py-2 text-sm md:right-[6%] md:top-[6%]" data-i18n="bubble">Feeling nervous? Everyone does. I'll go slow.</p>
+        <div class="tilt" id="tilt">
+          <div class="tilt-inner" id="tiltInner">
+            <svg class="aspect-[100/112] w-[min(34vw,150px)] -rotate-3 md:w-[280px]" role="img" aria-label="Sprout, a friendly seed mascot"><use href="#sprout"/></svg>
+          </div>
+          <div class="tilt-shadow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="py-8">
+      <h2 class="mb-2 text-[1.8rem]" data-i18n="howTitle">Three small steps. That's all.</h2>
+      <p class="mb-5 max-w-[60ch] text-mute" data-i18n="howLead">Most people stop because they don't know what comes next. So we tell you before you start.</p>
+      <div class="grid gap-3.5 md:grid-cols-3">
+        <article class="card">
+          <span class="mb-2 inline-grid h-8 w-8 place-items-center rounded-full bg-forest font-bold text-white">1</span>
+          <h3 class="mb-1 text-xl" data-i18n="s1t">Get your papers ready</h3>
+          <p class="text-[15px] text-mute" data-i18n="s1p">Keep your PAN card and your Aadhaar-linked phone nearby. It takes about 5 minutes.</p>
+        </article>
+        <article class="card md:rotate-[.6deg]">
+          <span class="mb-2 inline-grid h-8 w-8 place-items-center rounded-full bg-forest font-bold text-white">2</span>
+          <h3 class="mb-1 text-xl" data-i18n="s2t">Verify who you are</h3>
+          <p class="text-[15px] text-mute" data-i18n="s2p">This is a one-time check required by law. We'll tell you if it needs a minute to process.</p>
+        </article>
+        <article class="card md:-rotate-[.5deg]">
+          <span class="mb-2 inline-grid h-8 w-8 place-items-center rounded-full bg-forest font-bold text-white">3</span>
+          <h3 class="mb-1 text-xl" data-i18n="s3t">Put in your first ₹100</h3>
+          <p class="text-[15px] text-mute" data-i18n="s3p">Pick an amount you're comfortable with. You can add more whenever you like.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHAT YOU NEED -->
+    <section class="py-8">
+      <div class="grid gap-3.5 rounded-[18px] bg-forest p-6 text-white md:grid-cols-2 md:items-center md:p-8">
+        <div>
+          <h2 class="mb-2 text-[1.8rem] !text-white" data-i18n="needTitle">Before you download</h2>
+          <p data-i18n="needLead">Don't get stuck halfway. Keep these with you:</p>
+        </div>
+        <ul class="grid list-none gap-2.5 p-0">
+          <li class="rounded-[10px] bg-white/10 px-3.5 py-3"><b class="text-gold">PAN card</b> <span data-i18n="needPan">(the card or just the number)</span></li>
+          <li class="rounded-[10px] bg-white/10 px-3.5 py-3"><b class="text-gold">Aadhaar</b> <span data-i18n="needAadhaar">(with your mobile number linked)</span></li>
+          <li class="rounded-[10px] bg-white/10 px-3.5 py-3"><b class="text-gold">5 minutes</b> <span data-i18n="needTime">and a steady network</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- APP ONBOARDING -->
+    <section id="app" class="py-8">
+      <h2 class="mb-2 text-[1.8rem]" data-i18n="appTitle">Inside the app: the first 5 screens</h2>
+      <p class="mb-5 max-w-[60ch] text-mute" data-i18n="appLead">Same friendly seed, same calm tone. Swipe sideways to walk through it.</p>
+
+      <div class="flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-5 pt-2" tabindex="0" aria-label="App onboarding screens">
+
+        <!-- Screen 1 -->
+        <div class="phone">
+          <p class="!text-xs">1 of 5 · Welcome</p>
+          <svg class="h-[92px] w-[84px] self-center" aria-hidden="true"><use href="#sprout"/></svg>
+          <h3>Hi, I'm Sprout.</h3>
+          <p>I'll be with you till your first investment. No rush, no pressure.</p>
+          <label class="field-label" for="mobile">Your mobile number</label>
+          <input class="field" id="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit number" autocomplete="off">
+          <div class="mt-auto grid gap-2">
+            <button class="btn btn-full" type="button">Continue</button>
+            <p class="tiny">We'll send a code by SMS.</p>
+          </div>
+        </div>
+
+        <!-- Screen 2 -->
+        <div class="phone md:rotate-[.4deg]">
+          <p class="!text-xs">2 of 5 · Get ready</p>
+          <svg class="h-[92px] w-[84px] self-center" aria-hidden="true"><use href="#sprout"/></svg>
+          <h3>Two things before we start</h3>
+          <ul class="chk my-2.5 grid list-none gap-2 p-0">
+            <li class="done"><span></span> Your PAN card or number</li>
+            <li class="done"><span></span> Aadhaar with linked mobile</li>
+            <li><span></span> About 5 minutes</li>
+          </ul>
+          <p class="tiny">Don't have them right now? Save your progress and come back.</p>
+          <div class="mt-auto grid gap-2">
+            <button class="btn btn-full" type="button">I have them</button>
+            <button class="btn btn-ghost btn-full" type="button">Remind me later</button>
+          </div>
+        </div>
+
+        <!-- Screen 3 -->
+        <div class="phone">
+          <p class="!text-xs">3 of 5 · Verify</p>
+          <div class="bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="KYC progress"><i style="width:40%"></i></div>
+          <h3>Step 1 of 2: your PAN</h3>
+          <p>It's a legal requirement for investing in India. We never show it to anyone.</p>
+          <label class="field-label" for="pan">PAN number</label>
+          <input class="field" id="pan" type="text" maxlength="10" placeholder="ABCDE1234F" autocomplete="off" autocapitalize="characters">
+          <p class="tiny" id="panHint">Format: 5 letters, 4 digits, 1 letter.</p>
+          <div class="mt-auto grid gap-2">
+            <button class="btn btn-full" type="button">Check my PAN</button>
+          </div>
+        </div>
+
+        <!-- Screen 4 -->
+        <div class="phone md:rotate-[.4deg]">
+          <p class="!text-xs">4 of 5 · Checking</p>
+          <svg class="bob h-[92px] w-[84px] self-center" aria-hidden="true"><use href="#sprout"/></svg>
+          <h3>Checking your details…</h3>
+          <p id="waitMsg">This usually takes under 2 minutes. The app hasn't frozen. We're just waiting for the official records.</p>
+          <div class="bar"><i class="loading"></i></div>
+          <p class="tiny">You can close the app. We'll send you a notification when it's done.</p>
+          <div class="mt-auto grid gap-2">
+            <button class="btn btn-ghost btn-full" type="button">Notify me, I'll close the app</button>
+          </div>
+        </div>
+
+        <!-- Screen 5 -->
+        <div class="phone">
+          <p class="!text-xs">5 of 5 · First step</p>
+          <svg class="h-[92px] w-[84px] self-center" aria-hidden="true"><use href="#sprout"/></svg>
+          <h3>You're verified. Pick an amount.</h3>
+          <div class="my-3 flex flex-wrap gap-2" id="chips" role="group" aria-label="Amount">
+            <button class="chip" type="button" aria-pressed="false">₹100</button>
+            <button class="chip chip-on" type="button" aria-pressed="true">₹500</button>
+            <button class="chip" type="button" aria-pressed="false">₹1,000</button>
+          </div>
+          <p class="tiny border-l-[3px] border-gold pl-2">Investments are subject to market risks. Returns are not assured, and you may lose some or all of your money.</p>
+          <div class="mt-auto grid gap-2">
+            <button class="btn btn-full" id="investBtn" type="button">Invest ₹500</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-line pb-9 pt-5 text-[13px] text-mute">
+    <p data-i18n="foot">Sprout is an investing app for first-time investors. Investments are subject to market risks. Please read all scheme-related documents carefully before investing.</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
