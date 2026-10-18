@@ -6,8 +6,20 @@
 const strings = {
   en: {
     navHow: "How it works",
-    navJourney: "Your first 5 steps",
+    navFaq: "Common questions",
     navStart: "Get started",
+    backToSite: "Back to website",
+    journeyLabel: "Your first steps",
+    journeyTitle: "A little clarity goes a long way.",
+    journeyCopy: "This is a preview of the Sprout onboarding journey. Take it one screen at a time; you can go back whenever you like.",
+    journeyNoteTitle: "Have your documents nearby",
+    journeyNoteCopy: "You’ll need your PAN and the mobile number linked to your Aadhaar.",
+    stepLabelPrefix: "Step",
+    readyScreenCopy: "Have these ready so you won’t get stuck halfway.",
+    backButton: "Back",
+    ctaEyebrow: "Whenever you’re ready",
+    ctaTitle: "Your first step can be a small one.",
+    ctaLead: "See what onboarding feels like before you commit to anything.",
     heroEyebrow: "A more thoughtful way to begin",
     assurance: "Clear steps. Your pace. No pressure.",
     firstStep: "Your first step",
@@ -25,7 +37,7 @@ const strings = {
     faq3a: "No. Investments are subject to market risks, and returns are not assured. Read the relevant scheme documents before deciding.",
     appEyebrow: "The same calm, one screen at a time",
     demoNote: "Prototype only. No personal information is sent or stored.",
-    demoWaitNote: "In this prototype, continue to see the next screen.",
+    demoWaitNote: "This preview does not connect to identity records. Continue to see the next screen.",
     waitNote: "Your request is still in progress.",
     amountNote: "Choose an amount that feels right for you. This demo won’t place an investment.",
     prototypeNote: "This is a design prototype. Identity verification, SMS, notifications and investments are not processed.",
@@ -96,7 +108,7 @@ const strings = {
     w2: "Your request is still being processed. We’ll let you know when there’s an update.",
     w3: "You can close the app and come back later. We’ll notify you when your verification is ready.",
     p4tiny: "You can close the app. We'll send you a notification when it's done.",
-    p4btn: "Notify me, I'll close the app",
+    p4btn: "Continue to amount preview",
 
     tag5: "5 of 5 · First step",
     p5h: "Ready for your first step?",
@@ -109,8 +121,20 @@ const strings = {
 
   hi: {
     navHow: "यह कैसे काम करता है",
-    navJourney: "आपके पहले 5 कदम",
+    navFaq: "आम सवाल",
     navStart: "शुरू करें",
+    backToSite: "वेबसाइट पर वापस जाएँ",
+    journeyLabel: "आपके पहले कदम",
+    journeyTitle: "थोड़ी स्पष्टता बहुत मदद करती है।",
+    journeyCopy: "यह Sprout की शुरुआत की प्रक्रिया का पूर्वावलोकन है। एक बार में एक स्क्रीन देखें; आप कभी भी पीछे जा सकते हैं।",
+    journeyNoteTitle: "दस्तावेज़ पास रखें",
+    journeyNoteCopy: "आपको PAN और आधार से लिंक मोबाइल नंबर चाहिए।",
+    stepLabelPrefix: "कदम",
+    readyScreenCopy: "बीच में अटकने से बचने के लिए ये चीज़ें तैयार रखें।",
+    backButton: "पीछे",
+    ctaEyebrow: "जब आप तैयार हों",
+    ctaTitle: "आपका पहला कदम छोटा हो सकता है।",
+    ctaLead: "कुछ भी तय करने से पहले ऑनबोर्डिंग का अनुभव देखें।",
     heroEyebrow: "शुरुआत करने का एक सोच-समझकर बनाया तरीका",
     assurance: "साफ़ कदम। आपकी गति। कोई दबाव नहीं।",
     firstStep: "आपका पहला कदम",
@@ -128,7 +152,7 @@ const strings = {
     faq3a: "नहीं। निवेश बाज़ार जोखिमों के अधीन हैं और रिटर्न की गारंटी नहीं है। निर्णय से पहले संबंधित योजना दस्तावेज़ पढ़ें।",
     appEyebrow: "वही शांति, एक बार में एक स्क्रीन",
     demoNote: "यह सिर्फ़ एक प्रोटोटाइप है। कोई निजी जानकारी भेजी या सेव नहीं होती।",
-    demoWaitNote: "इस प्रोटोटाइप में अगली स्क्रीन देखने के लिए आगे बढ़ें।",
+    demoWaitNote: "यह पूर्वावलोकन पहचान रिकॉर्ड से नहीं जुड़ता। अगली स्क्रीन देखने के लिए आगे बढ़ें।",
     waitNote: "आपकी जाँच जारी है।",
     amountNote: "वह रकम चुनें जो आपको ठीक लगे। यह डेमो निवेश नहीं करेगा।",
     prototypeNote: "यह एक डिज़ाइन प्रोटोटाइप है। पहचान सत्यापन, SMS, सूचनाएँ और निवेश संसाधित नहीं होते।",
@@ -199,7 +223,7 @@ const strings = {
     w2: "आपकी जाँच जारी है। नई जानकारी मिलते ही हम आपको बताएँगे।",
     w3: "आप ऐप बंद करके बाद में लौट सकते हैं। सत्यापन पूरा होने पर हम आपको सूचना देंगे।",
     p4tiny: "आप ऐप बंद कर सकते हैं। पूरा होते ही हम सूचना भेजेंगे।",
-    p4btn: "मुझे सूचना दें और ऐप बंद करें",
+    p4btn: "रकम का पूर्वावलोकन देखें",
 
     tag5: "5/5 · पहला कदम",
     p5h: "अपने पहले कदम के लिए तैयार हैं?",
@@ -213,29 +237,16 @@ const strings = {
 
 let lang = "en";
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const behavior = reduceMotion ? "auto" : "smooth";
 
 function t(key) {
   return (strings[lang] && strings[lang][key]) || strings.en[key] || "";
 }
 
-// Set a piece of text AND remember its key, so it re-translates on language switch.
 function setText(el, key) {
   el.dataset.i18n = key;
-  el.innerHTML = t(key);
+  el.textContent = t(key);
 }
 
-// ---------- Amount chips and the invest button (screen 5) ----------
-const chips = document.getElementById("chips");
-const investBtn = document.getElementById("investBtn");
-const investMsg = document.getElementById("investMsg");
-let amount = "₹100";
-
-function renderInvest() {
-  investBtn.textContent = t("invest").replace("{amt}", amount);
-}
-
-// ---------- Language switch ----------
 function applyLang(next) {
   lang = next;
   document.documentElement.lang = next;
@@ -245,157 +256,176 @@ function applyLang(next) {
   document.querySelectorAll("[data-i18n-ph]").forEach((el) => {
     el.placeholder = t(el.dataset.i18nPh);
   });
-  renderInvest();
+  const langBtn = document.getElementById("langBtn");
+  if (langBtn) langBtn.textContent = next === "en" ? "हिं / EN" : "EN / हिं";
 }
 
-document.getElementById("langBtn").addEventListener("click", () => {
-  const next = lang === "en" ? "hi" : "en";
-  applyLang(next);
-  document.getElementById("langBtn").textContent = next === "en" ? "हिं / EN" : "EN / हिं";
+document.getElementById("langBtn")?.addEventListener("click", () => {
+  applyLang(lang === "en" ? "hi" : "en");
 });
 
-// ---------- Desktop/mobile presentation preview ----------
-const siteFrame = document.getElementById("siteFrame");
 const desktopPreviewBtn = document.getElementById("desktopPreviewBtn");
 const mobilePreviewBtn = document.getElementById("mobilePreviewBtn");
+const siteFrame = document.getElementById("siteFrame");
 const previewStatus = document.getElementById("previewStatus");
 
-function setPreview(mode) {
-  const mobilePreview = mode === "mobile";
-  siteFrame.classList.toggle("preview-mobile", mobilePreview);
-  siteFrame.classList.toggle("preview-desktop", !mobilePreview);
-  desktopPreviewBtn.classList.toggle("is-selected", !mobilePreview);
-  mobilePreviewBtn.classList.toggle("is-selected", mobilePreview);
-  desktopPreviewBtn.setAttribute("aria-pressed", String(!mobilePreview));
-  mobilePreviewBtn.setAttribute("aria-pressed", String(mobilePreview));
-  previewStatus.textContent = `${mobilePreview ? "Mobile" : "Desktop"} preview selected`;
-}
-
-setPreview(window.matchMedia("(max-width: 767px)").matches ? "mobile" : "desktop");
-desktopPreviewBtn.addEventListener("click", () => setPreview("desktop"));
-mobilePreviewBtn.addEventListener("click", () => setPreview("mobile"));
-
-// ---------- Journey: website to app, and screen to screen ----------
-const phonesRow = document.getElementById("phones");
-const mobile = document.getElementById("mobile");
-
-function goTo(n) {
-  const el = document.getElementById("screen-" + n);
-  if (!el) return;
-  setPreview("mobile");
-  document.getElementById("app").scrollIntoView({ behavior, block: "start" });
-  setTimeout(() => el.scrollIntoView({ behavior, inline: "start", block: "nearest" }), reduceMotion ? 0 : 400);
-  const input = el.querySelector("input");
-  if (input) setTimeout(() => input.focus({ preventScroll: true }), reduceMotion ? 0 : 450);
-}
-
-// Any element with data-goto="N" opens that app screen
-document.querySelectorAll("[data-goto]").forEach((el) => {
-  el.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (el.dataset.goto === "2" && el.closest("#screen-1")) {
-      const mobileHint = document.getElementById("mobileHint");
-      if (!/^\d{10}$/.test(mobile.value)) {
-        mobileHint.className = "field-hint status-error";
-        mobile.setAttribute("aria-invalid", "true");
-        setText(mobileHint, "mobileBad");
-        mobile.focus();
-        return;
-      }
-      mobileHint.className = "field-hint";
-      mobile.setAttribute("aria-invalid", "false");
-      setText(mobileHint, "p1tiny");
-    }
-    goTo(el.dataset.goto);
-  });
-});
-
-// The hero button "Start with ₹100" lands on screen 1, ready to type
-document.getElementById("startBtn").addEventListener("click", (e) => {
-  e.preventDefault();
-  setPreview("mobile");
-  document.getElementById("app").scrollIntoView({ behavior, block: "start" });
-  setTimeout(() => {
-    phonesRow.scrollTo({ left: 0, behavior });
-    mobile.focus({ preventScroll: true });
-  }, reduceMotion ? 0 : 500);
-});
-
-// ---------- Screen 1: digits only ----------
-mobile.addEventListener("input", () => {
-  mobile.value = mobile.value.replace(/\D/g, "");
-  const mobileHint = document.getElementById("mobileHint");
-  if (mobileHint.dataset.i18n === "mobileBad") {
-    mobileHint.className = "field-hint";
-    mobile.setAttribute("aria-invalid", "false");
-    setText(mobileHint, "p1tiny");
+if (desktopPreviewBtn && mobilePreviewBtn && siteFrame && previewStatus) {
+  function setPreview(mode) {
+    const mobilePreview = mode === "mobile";
+    siteFrame.classList.toggle("preview-mobile", mobilePreview);
+    siteFrame.classList.toggle("preview-desktop", !mobilePreview);
+    desktopPreviewBtn.classList.toggle("is-selected", !mobilePreview);
+    mobilePreviewBtn.classList.toggle("is-selected", mobilePreview);
+    desktopPreviewBtn.setAttribute("aria-pressed", String(!mobilePreview));
+    mobilePreviewBtn.setAttribute("aria-pressed", String(mobilePreview));
+    previewStatus.textContent = `${mobilePreview ? "Mobile" : "Desktop"} preview selected`;
   }
-});
 
-// ---------- Screen 2: remind me later ----------
-document.getElementById("remindBtn").addEventListener("click", () => {
-  setText(document.getElementById("remindMsg"), "remind");
-});
-
-// ---------- Screen 3: PAN format check (AAAAA9999A) ----------
-const pan = document.getElementById("pan");
-const panHint = document.getElementById("panHint");
-const PAN_RE = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
-
-function showPan(key, cls) {
-  panHint.className = "field-hint" + (cls ? " " + cls : "");
-  pan.setAttribute("aria-invalid", String(key === "panBad"));
-  setText(panHint, key);
+  setPreview(window.matchMedia("(max-width: 767px)").matches ? "mobile" : "desktop");
+  desktopPreviewBtn.addEventListener("click", () => setPreview("desktop"));
+  mobilePreviewBtn.addEventListener("click", () => setPreview("mobile"));
 }
 
-pan.addEventListener("input", () => {
-  pan.value = pan.value.toUpperCase();
-  if (pan.value.length < 10) showPan("panFmt");
-  else if (PAN_RE.test(pan.value)) showPan("panOk", "status-good");
-  else showPan("panBad", "status-error");
-});
-
-document.getElementById("panBtn").addEventListener("click", () => {
-  if (PAN_RE.test(pan.value)) {
-    goTo(4);
-  } else {
-    showPan("panBad", "status-error");
-    pan.focus();
-  }
-});
-
-// ---------- Screen 5: pick an amount, then invest ----------
-chips.addEventListener("click", (e) => {
-  const chip = e.target.closest(".chip");
-  if (!chip) return;
-  chips.querySelectorAll(".chip").forEach((c) => {
-    c.classList.remove("chip-on");
-    c.setAttribute("aria-pressed", "false");
-  });
-  chip.classList.add("chip-on");
-  chip.setAttribute("aria-pressed", "true");
-  amount = chip.textContent;
-  investMsg.textContent = "";
-  investMsg.removeAttribute("data-i18n");
-  renderInvest();
-});
-
-investBtn.addEventListener("click", () => {
-  setText(investMsg, "investDone");
-});
-
-// ---------- CSS 3D tilt on the hero mascot (no library) ----------
 const tilt = document.getElementById("tilt");
 const tiltInner = document.getElementById("tiltInner");
 
-if (!reduceMotion) {
-  tilt.addEventListener("pointermove", (e) => {
-    const r = tilt.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    tiltInner.style.transform = `rotateY(${x * 28}deg) rotateX(${-y * 28}deg)`;
+if (tilt && tiltInner && !reduceMotion) {
+  tilt.addEventListener("pointermove", (event) => {
+    const rect = tilt.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    tiltInner.style.transform = `rotateY(${x * 20}deg) rotateX(${-y * 20}deg)`;
   });
   tilt.addEventListener("pointerleave", () => {
     tiltInner.style.transform = "rotateY(0) rotateX(0)";
   });
+}
+
+const flowScreens = [...document.querySelectorAll("[data-flow-screen]")];
+
+if (flowScreens.length) {
+  const stepLabel = document.getElementById("stepLabel");
+  const progressBar = document.getElementById("flowProgress");
+  const progressTrack = progressBar.parentElement;
+  const previousButton = document.getElementById("previousStep");
+  const nextButton = document.getElementById("nextStep");
+  const mobileInput = document.getElementById("mobile");
+  const mobileHint = document.getElementById("mobileHint");
+  const panInput = document.getElementById("pan");
+  const panHint = document.getElementById("panHint");
+  const amountButtons = [...document.querySelectorAll("[data-amount]")];
+  const investButton = document.getElementById("investBtn");
+  const investMessage = document.getElementById("investMsg");
+  const panPattern = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
+  let currentStep = Number(new URLSearchParams(location.search).get("step")) || 1;
+  let amount = "₹100";
+
+  function setStep(step, updateHistory = false) {
+    currentStep = Math.min(flowScreens.length, Math.max(1, step));
+    flowScreens.forEach((screen, index) => {
+      const active = index === currentStep - 1;
+      screen.hidden = !active;
+      screen.setAttribute("aria-hidden", String(!active));
+    });
+    stepLabel.textContent = `${currentStep} / ${flowScreens.length}`;
+    progressBar.style.width = `${(currentStep / flowScreens.length) * 100}%`;
+    progressTrack.setAttribute("aria-valuenow", String(currentStep));
+    previousButton.disabled = currentStep === 1;
+    nextButton.hidden = currentStep === flowScreens.length;
+    nextButton.dataset.i18n = currentStep === 4 ? "p4btn" : "p1btn";
+    nextButton.textContent = t(nextButton.dataset.i18n);
+    if (updateHistory) {
+      history.pushState({ step: currentStep }, "", `?step=${currentStep}`);
+    }
+    const heading = flowScreens[currentStep - 1].querySelector("h1");
+    heading.focus({ preventScroll: true });
+  }
+
+  function showMobileError() {
+    mobileInput.setAttribute("aria-invalid", "true");
+    mobileHint.className = "field-hint status-error";
+    setText(mobileHint, "mobileBad");
+    mobileInput.focus();
+  }
+
+  function validateMobile() {
+    if (!/^\d{10}$/.test(mobileInput.value)) {
+      showMobileError();
+      return false;
+    }
+    mobileInput.setAttribute("aria-invalid", "false");
+    mobileHint.className = "field-hint";
+    setText(mobileHint, "p1tiny");
+    return true;
+  }
+
+  function validatePan() {
+    panInput.value = panInput.value.toUpperCase();
+    if (!panPattern.test(panInput.value)) {
+      panInput.setAttribute("aria-invalid", "true");
+      panHint.className = "field-hint status-error";
+      setText(panHint, "panBad");
+      panInput.focus();
+      return false;
+    }
+    panInput.setAttribute("aria-invalid", "false");
+    panHint.className = "field-hint status-good";
+    setText(panHint, "panOk");
+    return true;
+  }
+
+  nextButton.addEventListener("click", () => {
+    if (currentStep === 1 && !validateMobile()) return;
+    if (currentStep === 3 && !validatePan()) return;
+    setStep(currentStep + 1, true);
+  });
+
+  previousButton.addEventListener("click", () => setStep(currentStep - 1, true));
+
+  window.addEventListener("popstate", () => {
+    const step = Number(new URLSearchParams(location.search).get("step")) || 1;
+    setStep(step);
+  });
+
+  mobileInput.addEventListener("input", () => {
+    mobileInput.value = mobileInput.value.replace(/\D/g, "");
+    if (mobileInput.getAttribute("aria-invalid") === "true") {
+      mobileInput.setAttribute("aria-invalid", "false");
+      mobileHint.className = "field-hint";
+      setText(mobileHint, "p1tiny");
+    }
+  });
+
+  panInput.addEventListener("input", () => {
+    panInput.value = panInput.value.toUpperCase();
+    panInput.setAttribute("aria-invalid", "false");
+    if (panInput.value.length === 10 && panPattern.test(panInput.value)) {
+      panHint.className = "field-hint status-good";
+      setText(panHint, "panOk");
+    } else {
+      panHint.className = "field-hint";
+      setText(panHint, "panFmt");
+    }
+  });
+
+  document.getElementById("remindBtn").addEventListener("click", () => {
+    setText(document.getElementById("remindMsg"), "remind");
+  });
+
+  amountButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      amountButtons.forEach((item) => {
+        item.classList.toggle("chip-on", item === button);
+        item.setAttribute("aria-pressed", String(item === button));
+      });
+      amount = button.dataset.amount;
+      investMessage.textContent = "";
+      investButton.textContent = t("invest").replace("{amt}", amount);
+    });
+  });
+
+  investButton.addEventListener("click", () => setText(investMessage, "investDone"));
+
+  const requestedStep = Number(new URLSearchParams(location.search).get("step")) || 1;
+  setStep(requestedStep);
 }

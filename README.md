@@ -32,20 +32,16 @@ python -m http.server 8000
 
 Visit <http://localhost:8000>. The build command generates `dist/output.css`, which is loaded by `index.html`.
 
-### Desktop and mobile previews
+### Separate website and onboarding pages
 
-On desktop, use the **Desktop** and **Mobile** controls at the top of the page to switch presentations:
-
-- **Desktop** shows the full landing page and all five onboarding screens in a wide layout.
-- **Mobile** shows the same story in a narrow, stacked layout with horizontally swipeable onboarding screens.
-- The “Start with ₹100” and “See it in app screens” links switch to Mobile preview and take you to the relevant onboarding section.
-- On narrow browser windows and real phones, Mobile layout is selected automatically and the preview controls are hidden.
-
-The preview controls are for judges comparing both layouts on one computer. On a real phone, the page uses the available screen width directly rather than placing the mobile layout inside a simulated phone frame.
+- `index.html` is the responsive Sprout homepage. Its calls to action open the separate onboarding page.
+- `onboarding.html` is a dedicated, responsive onboarding experience. It shows one app screen at a time and advances through the five-step flow.
+- Homepage journey links can open the onboarding flow at the relevant step, such as `onboarding.html?step=3`.
+- Desktop and mobile layouts are responsive presentations of each page, not separate sections shown together.
 
 ## Story and onboarding
 
-The homepage introduces Sprout and explains the journey in three steps: prepare your documents, verify your identity, and choose an investment amount. The primary call to action takes visitors directly to onboarding screen 1. The onboarding concept then shows five screens:
+The homepage introduces Sprout and explains the journey in three steps: prepare your documents, verify your identity, and choose an investment amount. The primary call to action opens the separate onboarding page at screen 1. The onboarding flow then shows five screens:
 
 1. Welcome and mobile-number entry
 2. PAN/Aadhaar preparation checklist
@@ -67,8 +63,9 @@ The mascot is an inline SVG reused across the homepage and onboarding, with happ
 
 ## Project files
 
-- `index.html` — homepage, preview controls, mascot artwork, and onboarding screen markup
-- `script.js` — language switching and prototype interactions
+- `index.html` — responsive marketing homepage and mascot artwork
+- `onboarding.html` — separate five-screen onboarding experience
+- `script.js` — shared language switching and page-specific prototype interactions
 - `src/input.css` — Tailwind input and custom component styles
 - `dist/output.css` — generated production stylesheet (created by `npm run build`)
 - `tailwind.config.js` — Tailwind theme and source configuration

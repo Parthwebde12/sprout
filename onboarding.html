@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <title>Get started with Sprout</title>
+  <meta name="description" content="Preview the Sprout first-investment onboarding journey, one screen at a time.">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body data-page="onboarding">
+  <svg class="svg-library" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="sp-body">
+        <path d="M50 36C79 35 91 60 87 83 83 103 63 108 50 108 37 108 17 103 13 83 9 60 21 37 50 36Z" fill="#E9C98A" stroke="#193B2D" stroke-width="2.5"/>
+        <circle cx="29" cy="79" r="5" fill="#E99A6B" opacity=".6"/>
+        <circle cx="71" cy="80" r="5" fill="#E99A6B" opacity=".6"/>
+      </g>
+    </defs>
+    <symbol id="sp-happy" viewBox="0 0 100 112">
+      <path d="M50 38C49 26 47 18 45 10" stroke="#193B2D" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path class="leaf-l" d="M45 15C29 4 14 11 11 26 27 31 40 27 45 15Z" fill="#5E9E54"/>
+      <path class="leaf-r" d="M46 19C60 4 81 8 85 23 69 33 52 31 46 19Z" fill="#7DB86A"/>
+      <use href="#sp-body"/>
+      <circle cx="37" cy="68" r="4.5" fill="#193B2D"/>
+      <circle cx="63" cy="69" r="4.5" fill="#193B2D"/>
+      <path d="M41 83Q50 91 59 83" stroke="#193B2D" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="sp-wait" viewBox="0 0 100 112">
+      <path d="M50 38C50 34 50 31 50 29" stroke="#193B2D" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M49 31C37 26 22 31 15 44 31 46 45 43 49 31Z" fill="#5E9E54"/>
+      <path d="M51 31C63 26 78 31 85 44 69 46 55 43 51 31Z" fill="#7DB86A"/>
+      <use href="#sp-body"/>
+      <circle cx="37" cy="68" r="4.5" fill="#193B2D"/>
+      <circle cx="63" cy="69" r="4.5" fill="#193B2D"/>
+      <path d="M30 57L43 61M70 57L57 61" stroke="#193B2D" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M42 86H58" stroke="#193B2D" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="sp-proud" viewBox="0 0 100 112">
+      <path d="M50 38C50 28 50 18 50 9" stroke="#193B2D" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path class="leaf-l" d="M49 22C36 22 22 14 18 3 34 1 47 8 49 22Z" fill="#5E9E54"/>
+      <path class="leaf-r" d="M51 18C64 18 78 10 82 3 67 1 53 5 51 18Z" fill="#7DB86A"/>
+      <path d="M50 11C45 7 46 2 50 1 54 2 55 7 50 11Z" fill="#3E7F3A"/>
+      <use href="#sp-body"/>
+      <path d="M31 69Q37 61 43 69M57 69Q63 61 69 69" stroke="#193B2D" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M38 80Q50 97 62 80Z" fill="#fff" stroke="#193B2D" stroke-width="2.5" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <div class="onboarding-shell">
+    <header class="onboarding-header">
+      <a class="brand" href="index.html" aria-label="Sprout home">
+        <span class="brand-mark"><svg aria-hidden="true"><use href="#sp-happy"/></svg></span>
+        <span>sprout<span class="brand-period">.</span></span>
+      </a>
+      <div class="onboarding-header-actions">
+        <button id="langBtn" class="language-button" type="button" aria-label="Change language">हिं / EN</button>
+        <a class="back-to-site" href="index.html" data-i18n="backToSite">Back to website</a>
+      </div>
+    </header>
+
+    <div class="risk-banner onboarding-risk" role="note">
+      <span class="risk-icon" aria-hidden="true">!</span>
+      <p data-i18n="risk">Investments are subject to market risks. Returns are not assured, and you may lose some or all of your money. Please read all scheme-related documents carefully.</p>
+    </div>
+
+    <main class="journey-layout">
+      <aside class="journey-aside">
+        <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="journeyLabel">Your first steps</span></p>
+        <h1 data-i18n="journeyTitle">A little clarity goes a long way.</h1>
+        <p class="journey-aside-copy" data-i18n="journeyCopy">This is a preview of the Sprout onboarding journey. Take it one screen at a time; you can go back whenever you like.</p>
+        <div class="journey-aside-note">
+          <svg aria-hidden="true"><use href="#sp-happy"/></svg>
+          <p><strong data-i18n="journeyNoteTitle">Have your documents nearby</strong><span data-i18n="journeyNoteCopy">You’ll need your PAN and the mobile number linked to your Aadhaar.</span></p>
+        </div>
+        <p class="journey-demo" data-i18n="demoNote">Prototype only. No personal information is sent or stored.</p>
+      </aside>
+
+      <section class="flow-panel" aria-label="Sprout onboarding">
+        <div class="flow-progress-area">
+          <div class="flow-progress-label"><span data-i18n="stepLabelPrefix">Step</span><span id="stepLabel">1 / 5</span></div>
+          <div class="flow-progress-track" role="progressbar" aria-label="Onboarding progress" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
+            <span id="flowProgress"></span>
+          </div>
+        </div>
+
+        <article class="flow-screen" data-flow-screen="1" aria-labelledby="screenOneHeading">
+          <svg class="flow-mascot" aria-hidden="true"><use href="#sp-happy"/></svg>
+          <p class="flow-kicker" data-i18n="tag1">01 · Welcome</p>
+          <h2 id="screenOneHeading" tabindex="-1" data-i18n="p1h">Hi, I'm Sprout.</h2>
+          <p class="flow-copy" data-i18n="p1p">I'll be with you till your first investment. No rush, no pressure.</p>
+          <label class="field-label" for="mobile" data-i18n="mobLbl">Your mobile number</label>
+          <input class="field" id="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit number" data-i18n-ph="mobPh" autocomplete="tel" aria-describedby="mobileHint" aria-invalid="false">
+          <p class="field-hint" id="mobileHint" aria-live="polite" data-i18n="p1tiny">The live app will send a code by SMS. This demo won’t.</p>
+        </article>
+
+        <article class="flow-screen" data-flow-screen="2" aria-labelledby="screenTwoHeading" hidden>
+          <svg class="flow-mascot" aria-hidden="true"><use href="#sp-happy"/></svg>
+          <p class="flow-kicker" data-i18n="tag2">02 · Get ready</p>
+          <h2 id="screenTwoHeading" tabindex="-1" data-i18n="p2h">Two things before we start</h2>
+          <p class="flow-copy" data-i18n="readyScreenCopy">Have these ready so you won’t get stuck halfway.</p>
+          <ul class="checklist">
+            <li><span aria-hidden="true">✓</span><b data-i18n="c1">Your PAN card or number</b></li>
+            <li><span aria-hidden="true">✓</span><b data-i18n="c2">Aadhaar with linked mobile</b></li>
+            <li><span aria-hidden="true">✓</span><b data-i18n="c3">About 5 minutes</b></li>
+          </ul>
+          <p class="status-message" id="remindMsg" aria-live="polite"></p>
+          <button class="text-button" id="remindBtn" type="button" data-i18n="p2btn2">Remind me later</button>
+        </article>
+
+        <article class="flow-screen" data-flow-screen="3" aria-labelledby="screenThreeHeading" hidden>
+          <span class="screen-symbol" aria-hidden="true">◎</span>
+          <p class="flow-kicker" data-i18n="tag3">03 · Identity details</p>
+          <h2 id="screenThreeHeading" tabindex="-1" data-i18n="p3h">Step 1 of 2: your PAN</h2>
+          <p class="flow-copy" data-i18n="p3p">A PAN is required for identity checks when investing in India. This demo only checks the format.</p>
+          <label class="field-label" for="pan" data-i18n="panLbl">PAN number</label>
+          <input class="field" id="pan" type="text" maxlength="10" placeholder="ABCDE1234F" autocomplete="off" autocapitalize="characters" aria-describedby="panHint" aria-invalid="false">
+          <p class="field-hint" id="panHint" aria-live="polite" data-i18n="panFmt">Format: 5 letters, 4 digits, 1 letter.</p>
+        </article>
+
+        <article class="flow-screen" data-flow-screen="4" aria-labelledby="screenFourHeading" hidden>
+          <svg class="flow-mascot mascot-wait" aria-hidden="true"><use href="#sp-wait"/></svg>
+          <p class="flow-kicker" data-i18n="tag4">04 · Verification</p>
+          <h2 id="screenFourHeading" tabindex="-1" data-i18n="p4h">Verification can take a moment.</h2>
+          <p class="flow-copy" data-i18n="w1">The app hasn't frozen. In the live app, your request is checked and this step can take a little while.</p>
+          <div class="wait-status"><span class="wait-pulse" aria-hidden="true"></span><span data-i18n="waitNote">Your request is still in progress.</span></div>
+          <p class="field-hint" data-i18n="demoWaitNote">This preview does not connect to identity records. Continue to see the next screen.</p>
+        </article>
+
+        <article class="flow-screen" data-flow-screen="5" aria-labelledby="screenFiveHeading" hidden>
+          <svg class="flow-mascot" aria-hidden="true"><use href="#sp-proud"/></svg>
+          <p class="flow-kicker" data-i18n="tag5">05 · First step</p>
+          <h2 id="screenFiveHeading" tabindex="-1" data-i18n="p5h">Ready for your first step?</h2>
+          <p class="flow-copy" data-i18n="amountNote">Choose an amount that feels right for you. This demo won’t place an investment.</p>
+          <div class="amount-options" role="group" aria-label="Choose an amount">
+            <button class="chip chip-on" type="button" data-amount="₹100" aria-pressed="true">₹100</button>
+            <button class="chip" type="button" data-amount="₹500" aria-pressed="false">₹500</button>
+            <button class="chip" type="button" data-amount="₹1,000" aria-pressed="false">₹1,000</button>
+          </div>
+          <p class="investment-risk" data-i18n="p5risk">Investments are subject to market risks. Returns are not assured, and you may lose some or all of your money.</p>
+          <p class="status-message" id="investMsg" aria-live="polite"></p>
+          <button class="button button-primary review-button" id="investBtn" type="button">Review ₹100</button>
+        </article>
+
+        <div class="flow-controls">
+          <button class="button button-secondary flow-back" id="previousStep" type="button" data-i18n="backButton" disabled>Back</button>
+          <button class="button button-primary flow-next" id="nextStep" type="button" data-i18n="p1btn">Continue</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="onboarding-footer">
+      <p data-i18n="prototypeNote">This is a design prototype. Identity verification, SMS, notifications and investments are not processed.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

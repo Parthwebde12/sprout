@@ -62,11 +62,11 @@
       </a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#how" data-i18n="navHow">How it works</a>
-        <a href="#app" data-i18n="navJourney">Your first 5 steps</a>
+        <a href="#faq" data-i18n="navFaq">Common questions</a>
       </nav>
       <div class="header-actions">
         <button id="langBtn" class="language-button" type="button" aria-label="Change language">हिं / EN</button>
-        <a class="header-cta" href="#app" data-goto="1" data-i18n="navStart">Get started <span aria-hidden="true">↗</span></a>
+        <a class="header-cta" href="onboarding.html?step=1" data-i18n="navStart">Get started <span aria-hidden="true">↗</span></a>
       </div>
     </header>
 
@@ -82,7 +82,7 @@
           <h1 data-i18n="h1">Your first investment, <em class="highlight">from just ₹100.</em></h1>
           <p class="hero-lead" data-i18n="sub">No jargon, no big amounts. Sprout walks you through it one small step at a time, at your pace.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#app" id="startBtn" data-i18n="cta">Start with ₹100 <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="onboarding.html?step=1" id="startBtn" data-i18n="cta">Start with ₹100 <span aria-hidden="true">↗</span></a>
             <a class="text-link" href="#how" data-i18n="how">How it works <span aria-hidden="true">↓</span></a>
           </div>
           <div class="hero-assurance" aria-label="Designed for first-time investors">
@@ -118,21 +118,21 @@
             <div class="step-icon" aria-hidden="true">▤</div>
             <h3 data-i18n="s1t">Get your papers ready</h3>
             <p data-i18n="s1p">Keep your PAN card and your Aadhaar-linked phone nearby. It takes about 5 minutes.</p>
-            <a href="#screen-2" data-goto="2" data-i18n="where1">See it in app screens 1–2</a>
+            <a href="onboarding.html?step=2" data-i18n="where1">See it in app screens 1–2</a>
           </article>
           <article class="step-card step-card-featured">
             <div class="step-top"><span class="step-number">02</span><span class="step-mark" aria-hidden="true">↗</span></div>
             <div class="step-icon" aria-hidden="true">◎</div>
             <h3 data-i18n="s2t">Verify who you are</h3>
             <p data-i18n="s2p">This is a one-time check required by law. We'll tell you if it needs a minute to process.</p>
-            <a href="#screen-3" data-goto="3" data-i18n="where2">See it in app screens 3–4</a>
+            <a href="onboarding.html?step=3" data-i18n="where2">See it in app screens 3–4</a>
           </article>
           <article class="step-card">
             <div class="step-top"><span class="step-number">03</span><span class="step-mark" aria-hidden="true">↗</span></div>
             <div class="step-icon" aria-hidden="true">↗</div>
             <h3 data-i18n="s3t">Put in your first ₹100</h3>
             <p data-i18n="s3p">Pick an amount you're comfortable with. You can add more whenever you like.</p>
-            <a href="#screen-5" data-goto="5" data-i18n="where3">See it in app screen 5</a>
+            <a href="onboarding.html?step=5" data-i18n="where3">See it in app screen 5</a>
           </article>
         </div>
       </section>
@@ -150,7 +150,7 @@
         </ul>
       </section>
 
-      <section class="faq-section">
+      <section id="faq" class="faq-section">
         <div class="faq-intro">
           <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="faqEyebrow">Good questions</span></p>
           <h2 data-i18n="faqTitle">A few things you might be wondering.</h2>
@@ -171,104 +171,13 @@
         </div>
       </section>
 
-      <section id="app" class="app-section">
-        <div class="app-heading">
-          <div class="section-heading">
-            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="appEyebrow">The same calm, one screen at a time</span></p>
-            <h2 data-i18n="appTitle">Inside the app: the first 5 screens</h2>
-            <p data-i18n="appLead">Same friendly seed, same calm tone. Swipe sideways to walk through it.</p>
-          </div>
-          <div class="journey-legend" aria-label="Your journey">
-            <span data-i18n="arc1">Nervous</span><i aria-hidden="true">→</i>
-            <span data-i18n="arc2">Informed</span><i aria-hidden="true">→</i>
-            <span data-i18n="arc3">Verified</span><i aria-hidden="true">→</i>
-            <span data-i18n="arc4">Invested</span>
-          </div>
+      <section class="homepage-cta">
+        <div>
+          <p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span><span data-i18n="ctaEyebrow">Whenever you’re ready</span></p>
+          <h2 data-i18n="ctaTitle">Your first step can be a small one.</h2>
+          <p data-i18n="ctaLead">See what onboarding feels like before you commit to anything.</p>
         </div>
-        <p class="journey-note" data-i18n="arcNote">Sprout grows as you do: watch its leaves from screen 1 to screen 5.</p>
-
-        <div id="phones" class="onboarding-track" tabindex="0" aria-label="App onboarding screens">
-          <article class="phone" id="screen-1" aria-labelledby="p1-heading">
-            <div class="phone-topline"><span data-i18n="tag1">1 of 5 · Welcome</span><span>01 / 05</span></div>
-            <div class="phone-progress" aria-hidden="true"><i style="width:20%"></i></div>
-            <svg class="phone-mascot" aria-hidden="true"><use href="#sp-happy"/></svg>
-            <h3 id="p1-heading" data-i18n="p1h">Hi, I'm Sprout.</h3>
-            <p class="phone-copy" data-i18n="p1p">I'll be with you till your first investment. No rush, no pressure.</p>
-            <label class="field-label" for="mobile" data-i18n="mobLbl">Your mobile number</label>
-            <input class="field" id="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit number" data-i18n-ph="mobPh" autocomplete="tel" aria-describedby="mobileHint" aria-invalid="false">
-            <div class="phone-bottom">
-              <p class="field-hint" id="mobileHint" aria-live="polite" data-i18n="p1tiny">We'll send a code by SMS.</p>
-              <button class="button button-primary button-full" type="button" data-goto="2" data-i18n="p1btn">Continue</button>
-              <p class="micro-copy" data-i18n="demoNote">Prototype only. No personal information is sent or stored.</p>
-            </div>
-          </article>
-
-          <article class="phone" id="screen-2" aria-labelledby="p2-heading">
-            <div class="phone-topline"><span data-i18n="tag2">2 of 5 · Get ready</span><span>02 / 05</span></div>
-            <div class="phone-progress" aria-hidden="true"><i style="width:40%"></i></div>
-            <svg class="phone-mascot" aria-hidden="true"><use href="#sp-happy"/></svg>
-            <h3 id="p2-heading" data-i18n="p2h">Two things before we start</h3>
-            <ul class="checklist">
-              <li><span aria-hidden="true">✓</span><b data-i18n="c1">Your PAN card or number</b></li>
-              <li><span aria-hidden="true">✓</span><b data-i18n="c2">Aadhaar with linked mobile</b></li>
-              <li><span aria-hidden="true">✓</span><b data-i18n="c3">About 5 minutes</b></li>
-            </ul>
-            <p class="phone-copy" data-i18n="p2tiny">Don't have them right now? Save your progress and come back.</p>
-            <p class="status-message" id="remindMsg" aria-live="polite"></p>
-            <div class="phone-bottom">
-              <button class="button button-primary button-full" type="button" data-goto="3" data-i18n="p2btn1">I have them</button>
-              <button class="button button-secondary button-full" type="button" id="remindBtn" data-i18n="p2btn2">Remind me later</button>
-            </div>
-          </article>
-
-          <article class="phone" id="screen-3" aria-labelledby="p3-heading">
-            <div class="phone-topline"><span data-i18n="tag3">3 of 5 · Verify</span><span>03 / 05</span></div>
-            <div class="phone-progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="KYC progress"><i style="width:60%"></i></div>
-            <span class="screen-symbol" aria-hidden="true">◎</span>
-            <h3 id="p3-heading" data-i18n="p3h">Step 1 of 2: your PAN</h3>
-            <p class="phone-copy" data-i18n="p3p">A PAN is required for identity checks when investing in India. This demo only checks the format.</p>
-            <label class="field-label" for="pan" data-i18n="panLbl">PAN number</label>
-            <input class="field" id="pan" type="text" maxlength="10" placeholder="ABCDE1234F" autocomplete="off" autocapitalize="characters" aria-describedby="panHint" aria-invalid="false">
-            <p class="field-hint" id="panHint" aria-live="polite" data-i18n="panFmt">Format: 5 letters, 4 digits, 1 letter.</p>
-            <div class="phone-bottom">
-              <button class="button button-primary button-full" type="button" id="panBtn" data-i18n="panBtn">Check my PAN</button>
-              <p class="micro-copy" data-i18n="demoNote">Prototype only. No personal information is sent or stored.</p>
-            </div>
-          </article>
-
-          <article class="phone" id="screen-4" aria-labelledby="p4-heading">
-            <div class="phone-topline"><span data-i18n="tag4">4 of 5 · Checking</span><span>04 / 05</span></div>
-            <div class="phone-progress" aria-hidden="true"><i style="width:80%"></i></div>
-            <svg class="phone-mascot mascot-wait" aria-hidden="true"><use href="#sp-wait"/></svg>
-            <h3 id="p4-heading" data-i18n="p4h">Checking your details…</h3>
-            <p class="phone-copy" id="waitMsg" data-i18n="w1">This usually takes under 2 minutes. The app hasn't frozen. We're just waiting for the official records.</p>
-            <div class="wait-status"><span class="wait-pulse" aria-hidden="true"></span><span data-i18n="waitNote">Your request is still in progress.</span></div>
-            <p class="field-hint" data-i18n="p4tiny">You can close the app. We'll send you a notification when it's done.</p>
-            <div class="phone-bottom">
-              <button class="button button-primary button-full" type="button" data-goto="5" data-i18n="p4btn">Notify me, I'll close the app</button>
-              <p class="micro-copy" data-i18n="demoWaitNote">In this prototype, continue to see the next screen.</p>
-            </div>
-          </article>
-
-          <article class="phone" id="screen-5" aria-labelledby="p5-heading">
-            <div class="phone-topline"><span data-i18n="tag5">5 of 5 · First step</span><span>05 / 05</span></div>
-            <div class="phone-progress" aria-hidden="true"><i style="width:100%"></i></div>
-            <svg class="phone-mascot" aria-hidden="true"><use href="#sp-proud"/></svg>
-            <h3 id="p5-heading" data-i18n="p5h">You're verified. Pick an amount.</h3>
-            <p class="phone-copy" data-i18n="amountNote">Choose an amount that feels right for you. This demo won’t place an investment.</p>
-            <div class="amount-options" id="chips" role="group" aria-label="Choose an amount">
-              <button class="chip chip-on" type="button" aria-pressed="true">₹100</button>
-              <button class="chip" type="button" aria-pressed="false">₹500</button>
-              <button class="chip" type="button" aria-pressed="false">₹1,000</button>
-            </div>
-            <p class="investment-risk" data-i18n="p5risk">Investments are subject to market risks. Returns are not assured, and you may lose some or all of your money.</p>
-            <p class="status-message" id="investMsg" aria-live="polite"></p>
-            <div class="phone-bottom">
-              <button class="button button-primary button-full" id="investBtn" type="button">Review ₹100</button>
-              <p class="micro-copy" data-i18n="demoNote">Prototype only. No personal information is sent or stored.</p>
-            </div>
-          </article>
-        </div>
+        <a class="button button-light" href="onboarding.html?step=1" data-i18n="cta">Start with ₹100 <span aria-hidden="true">↗</span></a>
       </section>
     </main>
 
