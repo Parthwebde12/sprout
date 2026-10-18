@@ -15,11 +15,19 @@
     outline: 3px solid #1F4D3A;
     outline-offset: 3px;
   }
+  /* Hindi: Devanagari needs a font with the glyphs and a bit more line height */
+  html:lang(hi) body,
+  html:lang(hi) h1,
+  html:lang(hi) h2,
+  html:lang(hi) h3 {
+    font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", system-ui, sans-serif;
+    line-height: 1.45;
+  }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex min-h-[48px] cursor-pointer items-center justify-center rounded-xl border-2 border-ink bg-gold px-6 font-bold text-ink no-underline shadow-hard;
+    @apply inline-flex min-h-[48px] cursor-pointer items-center justify-center rounded-xl border-2 border-ink bg-gold px-6 py-2 text-center font-bold leading-tight text-ink no-underline shadow-hard;
   }
   .btn:active {
     transform: translate(2px, 2px);
@@ -45,7 +53,7 @@
   }
 
   .phone {
-    @apply flex min-h-[520px] w-[260px] flex-none snap-start flex-col rounded-[30px] border-2 border-ink bg-paper px-4 py-[18px] shadow-soft;
+    @apply flex min-h-[540px] w-[260px] flex-none snap-start flex-col rounded-[30px] border-2 border-ink bg-paper px-4 py-[18px] shadow-soft;
   }
   .phone h3 {
     @apply my-2 text-xl;
