@@ -211,6 +211,7 @@ const previewStatus = document.getElementById("previewStatus");
 function setPreview(mode) {
   const mobilePreview = mode === "mobile";
   siteFrame.classList.toggle("preview-mobile", mobilePreview);
+  siteFrame.classList.toggle("preview-desktop", !mobilePreview);
   desktopPreviewBtn.classList.toggle("is-selected", !mobilePreview);
   mobilePreviewBtn.classList.toggle("is-selected", mobilePreview);
   desktopPreviewBtn.setAttribute("aria-pressed", String(!mobilePreview));
@@ -218,6 +219,7 @@ function setPreview(mode) {
   previewStatus.textContent = `${mobilePreview ? "Mobile" : "Desktop"} preview selected`;
 }
 
+setPreview(window.matchMedia("(max-width: 767px)").matches ? "mobile" : "desktop");
 desktopPreviewBtn.addEventListener("click", () => setPreview("desktop"));
 mobilePreviewBtn.addEventListener("click", () => setPreview("mobile"));
 
@@ -228,9 +230,11 @@ const mobile = document.getElementById("mobile");
 function goTo(n) {
   const el = document.getElementById("screen-" + n);
   if (!el) return;
-  el.scrollIntoView({ behavior, inline: "start", block: "nearest" });
+  setPreview("mobile");
+  document.getElementById("app").scrollIntoView({ behavior, block: "start" });
+  setTimeout(() => el.scrollIntoView({ behavior, inline: "start", block: "nearest" }), reduceMotion ? 0 : 400);
   const input = el.querySelector("input");
-  if (input) setTimeout(() => input.focus({ preventScroll: true }), 450);
+  if (input) setTimeout(() => input.focus({ preventScroll: true }), reduceMotion ? 0 : 450);
 }
 
 // Any element with data-goto="N" opens that app screen
@@ -244,6 +248,7 @@ document.querySelectorAll("[data-goto]").forEach((el) => {
 // The hero button "Start with ₹100" lands on screen 1, ready to type
 document.getElementById("startBtn").addEventListener("click", (e) => {
   e.preventDefault();
+  setPreview("mobile");
   document.getElementById("app").scrollIntoView({ behavior, block: "start" });
   setTimeout(() => {
     phonesRow.scrollTo({ left: 0, behavior });

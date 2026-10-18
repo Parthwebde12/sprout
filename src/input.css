@@ -153,18 +153,49 @@
     box-shadow: 0 12px 36px rgb(29 36 32 / 14%);
   }
 
+  #siteFrame.preview-desktop #app {
+    display: none;
+  }
+
   #siteFrame.preview-mobile [data-preview-layout="hero"],
   #siteFrame.preview-mobile [data-preview-layout="steps"],
   #siteFrame.preview-mobile [data-preview-layout="needs"] {
     grid-template-columns: minmax(0, 1fr) !important;
   }
 
+  #siteFrame.preview-mobile [data-preview-layout="hero"] {
+    gap: 0.75rem !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 1.75rem !important;
+  }
+
   #siteFrame.preview-mobile [data-preview-layout="hero"] > :nth-child(2) {
     min-height: 130px !important;
   }
 
+  #siteFrame.preview-mobile [data-preview-layout="hero"] > :nth-child(2) > p {
+    top: 0 !important;
+    right: 2% !important;
+  }
+
   #siteFrame.preview-mobile [data-preview-layout="hero"] svg {
     width: 150px !important;
+  }
+
+  #siteFrame.preview-mobile [data-preview-layout="steps"] article,
+  #siteFrame.preview-mobile .phone {
+    transform: none !important;
+  }
+
+  #siteFrame.preview-mobile [data-preview-layout="needs"] {
+    align-items: stretch !important;
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .preview-toolbar {
+    display: none;
   }
 }
 
