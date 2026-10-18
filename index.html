@@ -54,7 +54,14 @@
   </symbol>
 </svg>
 
-<div class="mx-auto max-w-[1040px] px-5">
+<div class="preview-toolbar" role="group" aria-label="Preview layout">
+  <span class="preview-label">Preview:</span>
+  <button id="desktopPreviewBtn" class="preview-option is-selected" type="button" aria-pressed="true">Desktop</button>
+  <button id="mobilePreviewBtn" class="preview-option" type="button" aria-pressed="false">Mobile</button>
+  <span id="previewStatus" class="sr-only" aria-live="polite">Desktop preview selected</span>
+</div>
+
+<div id="siteFrame" class="mx-auto max-w-[1040px] px-5">
 
   <header class="flex items-center justify-between py-3">
     <a href="#top" class="flex items-center gap-2 font-display text-[22px] font-bold text-forest no-underline" aria-label="Sprout home">
@@ -70,7 +77,7 @@
   <main id="top">
 
     <!-- HERO -->
-    <section class="grid items-center gap-3 pb-7 pt-3 md:grid-cols-[1.2fr_.8fr] md:gap-6 md:py-12">
+    <section data-preview-layout="hero" class="grid items-center gap-3 pb-7 pt-3 md:grid-cols-[1.2fr_.8fr] md:gap-6 md:py-12">
       <div>
         <h1 class="mb-3 text-[clamp(1.9rem,6vw,3.4rem)]" data-i18n="h1">Your first investment, <em class="mark not-italic">from just ₹100.</em></h1>
         <p class="mb-4 max-w-[46ch] text-[1.05rem] text-mute" data-i18n="sub">No jargon, no big amounts. Sprout walks you through it one small step at a time, at your pace.</p>
@@ -96,7 +103,7 @@
     <section id="how" class="py-8">
       <h2 class="mb-2 text-[1.8rem]" data-i18n="howTitle">Three small steps. That's all.</h2>
       <p class="mb-5 max-w-[60ch] text-mute" data-i18n="howLead">Most people stop because they don't know what comes next. So we tell you before you start.</p>
-      <div class="grid gap-3.5 md:grid-cols-3">
+      <div data-preview-layout="steps" class="grid gap-3.5 md:grid-cols-3">
         <article class="card">
           <span class="mb-2 inline-grid h-8 w-8 place-items-center rounded-full bg-forest font-bold text-white">1</span>
           <h3 class="mb-1 text-xl" data-i18n="s1t">Get your papers ready</h3>
@@ -120,7 +127,7 @@
 
     <!-- WHAT YOU NEED -->
     <section class="py-8">
-      <div class="grid gap-3.5 rounded-[18px] bg-forest p-6 text-white md:grid-cols-2 md:items-center md:p-8">
+      <div data-preview-layout="needs" class="grid gap-3.5 rounded-[18px] bg-forest p-6 text-white md:grid-cols-2 md:items-center md:p-8">
         <div>
           <h2 class="mb-2 text-[1.8rem] !text-white" data-i18n="needTitle">Before you download</h2>
           <p data-i18n="needLead">Don't get stuck halfway. Keep these with you:</p>

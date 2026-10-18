@@ -202,6 +202,25 @@ document.getElementById("langBtn").addEventListener("click", () => {
   applyLang(lang === "en" ? "hi" : "en");
 });
 
+// ---------- Desktop/mobile presentation preview ----------
+const siteFrame = document.getElementById("siteFrame");
+const desktopPreviewBtn = document.getElementById("desktopPreviewBtn");
+const mobilePreviewBtn = document.getElementById("mobilePreviewBtn");
+const previewStatus = document.getElementById("previewStatus");
+
+function setPreview(mode) {
+  const mobilePreview = mode === "mobile";
+  siteFrame.classList.toggle("preview-mobile", mobilePreview);
+  desktopPreviewBtn.classList.toggle("is-selected", !mobilePreview);
+  mobilePreviewBtn.classList.toggle("is-selected", mobilePreview);
+  desktopPreviewBtn.setAttribute("aria-pressed", String(!mobilePreview));
+  mobilePreviewBtn.setAttribute("aria-pressed", String(mobilePreview));
+  previewStatus.textContent = `${mobilePreview ? "Mobile" : "Desktop"} preview selected`;
+}
+
+desktopPreviewBtn.addEventListener("click", () => setPreview("desktop"));
+mobilePreviewBtn.addEventListener("click", () => setPreview("mobile"));
+
 // ---------- Journey: website to app, and screen to screen ----------
 const phonesRow = document.getElementById("phones");
 const mobile = document.getElementById("mobile");
