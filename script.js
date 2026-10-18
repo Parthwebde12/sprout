@@ -5,7 +5,31 @@
 // =====================================================================
 const strings = {
   en: {
-    h1: 'Your first investment, <em class="mark not-italic">from just ₹100.</em>',
+    navHow: "How it works",
+    navJourney: "Your first 5 steps",
+    navStart: "Get started",
+    heroEyebrow: "A more thoughtful way to begin",
+    assurance: "Clear steps. Your pace. No pressure.",
+    firstStep: "Your first step",
+    startSmall: "Small is a good place to start.",
+    artLabel: "Meet Sprout, your guide",
+    sectionLabel: "A clear path forward",
+    readyEyebrow: "A quick heads-up",
+    faqEyebrow: "Good questions",
+    faqTitle: "A few things you might be wondering.",
+    faq1q: "What should I have ready before I begin?",
+    faq1a: "Your PAN details and the mobile number linked to your Aadhaar. We’ll remind you before verification, so you don’t get stuck halfway.",
+    faq2q: "What if identity verification takes a while?",
+    faq2a: "We’ll explain that your request is still processing. You can leave the app and return when it’s ready.",
+    faq3q: "Is investing without risk?",
+    faq3a: "No. Investments are subject to market risks, and returns are not assured. Read the relevant scheme documents before deciding.",
+    appEyebrow: "The same calm, one screen at a time",
+    demoNote: "Prototype only. No personal information is sent or stored.",
+    demoWaitNote: "In this prototype, continue to see the next screen.",
+    waitNote: "Your request is still in progress.",
+    amountNote: "Choose an amount that feels right for you. This demo won’t place an investment.",
+    prototypeNote: "This is a design prototype. Identity verification, SMS, notifications and investments are not processed.",
+    h1: 'Your first investment, <em class="highlight">from just ₹100.</em>',
     sub: "No jargon, no big amounts. Sprout walks you through it one small step at a time, at your pace.",
     cta: "Start with ₹100",
     how: "How it works",
@@ -43,22 +67,23 @@ const strings = {
     p1p: "I'll be with you till your first investment. No rush, no pressure.",
     mobLbl: "Your mobile number",
     mobPh: "10-digit number",
+    mobileBad: "Enter a valid 10-digit mobile number to continue.",
     p1btn: "Continue",
-    p1tiny: "We'll send a code by SMS.",
+    p1tiny: "The live app will send a code by SMS. This demo won’t.",
 
     tag2: "2 of 5 · Get ready",
     p2h: "Two things before we start",
     c1: "Your PAN card or number",
     c2: "Aadhaar with linked mobile",
     c3: "About 5 minutes",
-    p2tiny: "Don't have them right now? Save your progress and come back.",
+    p2tiny: "No PAN or Aadhaar nearby? Come back when you have both.",
     p2btn1: "I have them",
     p2btn2: "Remind me later",
-    remind: "Okay. We'll send you a reminder.",
+    remind: "No problem. Come back when your documents are ready; this demo won’t schedule a reminder.",
 
     tag3: "3 of 5 · Verify",
     p3h: "Step 1 of 2: your PAN",
-    p3p: "It's a legal requirement for investing in India. We never show it to anyone.",
+    p3p: "A PAN is required for identity checks when investing in India. This demo only checks the format.",
     panLbl: "PAN number",
     panBtn: "Check my PAN",
     panFmt: "Format: 5 letters, 4 digits, 1 letter.",
@@ -66,23 +91,47 @@ const strings = {
     panBad: "That doesn't look right. Check it against your card.",
 
     tag4: "4 of 5 · Checking",
-    p4h: "Checking your details…",
-    w1: "This usually takes under 2 minutes. The app hasn't frozen. We're just waiting for the official records.",
-    w2: "Still working. Official records can be slow at busy times.",
-    w3: "Almost there. You can close the app, and we'll notify you.",
+    p4h: "Verification can take a moment.",
+    w1: "The app hasn't frozen. In the live app, your request is checked and this step can take a little while.",
+    w2: "Your request is still being processed. We’ll let you know when there’s an update.",
+    w3: "You can close the app and come back later. We’ll notify you when your verification is ready.",
     p4tiny: "You can close the app. We'll send you a notification when it's done.",
     p4btn: "Notify me, I'll close the app",
 
     tag5: "5 of 5 · First step",
-    p5h: "You're verified. Pick an amount.",
+    p5h: "Ready for your first step?",
     p5risk: "Investments are subject to market risks. Returns are not assured, and you may lose some or all of your money.",
-    invest: "Invest {amt}",
-    investDone: "Nice. Your first investment is being set up.",
+    invest: "Review {amt}",
+    investDone: "In a real app, you’d review scheme details before confirming. This prototype doesn’t process payments.",
 
     foot: "Sprout is an investing app for first-time investors. Investments are subject to market risks. Please read all scheme-related documents carefully before investing."
   },
 
   hi: {
+    navHow: "यह कैसे काम करता है",
+    navJourney: "आपके पहले 5 कदम",
+    navStart: "शुरू करें",
+    heroEyebrow: "शुरुआत करने का एक सोच-समझकर बनाया तरीका",
+    assurance: "साफ़ कदम। आपकी गति। कोई दबाव नहीं।",
+    firstStep: "आपका पहला कदम",
+    startSmall: "छोटी शुरुआत भी अच्छी शुरुआत है।",
+    artLabel: "मिलिए Sprout से, आपके साथी",
+    sectionLabel: "आगे का साफ़ रास्ता",
+    readyEyebrow: "शुरू करने से पहले",
+    faqEyebrow: "अच्छे सवाल",
+    faqTitle: "कुछ बातें जो आप सोच रहे होंगे।",
+    faq1q: "शुरू करने से पहले क्या तैयार रखना चाहिए?",
+    faq1a: "अपना PAN और आधार से लिंक मोबाइल नंबर पास रखें। सत्यापन से पहले हम आपको याद दिलाएँगे, ताकि आप बीच में न अटकें।",
+    faq2q: "पहचान सत्यापन में समय लगे तो?",
+    faq2a: "हम बताएँगे कि आपकी जाँच जारी है। आप ऐप बंद करके तैयार होने पर वापस आ सकते हैं।",
+    faq3q: "क्या निवेश में कोई जोखिम नहीं है?",
+    faq3a: "नहीं। निवेश बाज़ार जोखिमों के अधीन हैं और रिटर्न की गारंटी नहीं है। निर्णय से पहले संबंधित योजना दस्तावेज़ पढ़ें।",
+    appEyebrow: "वही शांति, एक बार में एक स्क्रीन",
+    demoNote: "यह सिर्फ़ एक प्रोटोटाइप है। कोई निजी जानकारी भेजी या सेव नहीं होती।",
+    demoWaitNote: "इस प्रोटोटाइप में अगली स्क्रीन देखने के लिए आगे बढ़ें।",
+    waitNote: "आपकी जाँच जारी है।",
+    amountNote: "वह रकम चुनें जो आपको ठीक लगे। यह डेमो निवेश नहीं करेगा।",
+    prototypeNote: "यह एक डिज़ाइन प्रोटोटाइप है। पहचान सत्यापन, SMS, सूचनाएँ और निवेश संसाधित नहीं होते।",
     h1: 'आपका पहला निवेश, <em class="mark not-italic">सिर्फ़ ₹100 से।</em>',
     sub: "कोई मुश्किल शब्द नहीं, बड़ी रकम नहीं। Sprout हर छोटा कदम आपके साथ चलता है।",
     cta: "₹100 से शुरू करें",
@@ -121,22 +170,23 @@ const strings = {
     p1p: "आपके पहले निवेश तक मैं आपके साथ हूँ। कोई जल्दी नहीं, कोई दबाव नहीं।",
     mobLbl: "आपका मोबाइल नंबर",
     mobPh: "10 अंकों का नंबर",
+    mobileBad: "आगे बढ़ने के लिए 10 अंकों का सही मोबाइल नंबर डालें।",
     p1btn: "आगे बढ़ें",
-    p1tiny: "हम SMS से कोड भेजेंगे।",
+    p1tiny: "असली ऐप SMS से कोड भेजेगा। इस डेमो में ऐसा नहीं होगा।",
 
     tag2: "2/5 · तैयारी",
     p2h: "शुरू करने से पहले ये चीज़ें",
     c1: "आपका PAN कार्ड या नंबर",
     c2: "आधार, लिंक किए मोबाइल के साथ",
     c3: "लगभग 5 मिनट",
-    p2tiny: "अभी ये पास नहीं हैं? अपनी प्रगति सेव करें और बाद में लौटें।",
+    p2tiny: "PAN या आधार पास नहीं हैं? दोनों तैयार हों, तब वापस आएँ।",
     p2btn1: "मेरे पास हैं",
     p2btn2: "बाद में याद दिलाएँ",
-    remind: "ठीक है। हम आपको याद दिलाएँगे।",
+    remind: "कोई बात नहीं। दस्तावेज़ तैयार हों तब लौटें; यह डेमो रिमाइंडर नहीं भेजेगा।",
 
     tag3: "3/5 · सत्यापन",
     p3h: "चरण 1/2: आपका PAN",
-    p3p: "भारत में निवेश के लिए यह कानूनी ज़रूरत है। हम इसे किसी को नहीं दिखाते।",
+    p3p: "भारत में निवेश से जुड़ी पहचान जाँच के लिए PAN ज़रूरी है। यह डेमो सिर्फ़ फ़ॉर्मैट जाँचता है।",
     panLbl: "PAN नंबर",
     panBtn: "मेरा PAN जाँचें",
     panFmt: "फ़ॉर्मैट: 5 अक्षर, 4 अंक, 1 अक्षर।",
@@ -144,18 +194,18 @@ const strings = {
     panBad: "यह सही नहीं लगता। इसे अपने कार्ड से मिलाएँ।",
 
     tag4: "4/5 · जाँच",
-    p4h: "आपकी जानकारी जाँची जा रही है…",
-    w1: "इसमें आमतौर पर 2 मिनट से कम लगते हैं। ऐप अटका नहीं है। हम आधिकारिक रिकॉर्ड का इंतज़ार कर रहे हैं।",
-    w2: "काम जारी है। व्यस्त समय में आधिकारिक रिकॉर्ड धीमे हो सकते हैं।",
-    w3: "बस थोड़ा और। आप ऐप बंद कर सकते हैं, हम आपको सूचना भेजेंगे।",
+    p4h: "सत्यापन में थोड़ा समय लग सकता है।",
+    w1: "ऐप अटका नहीं है। असली ऐप में आपकी जाँच होती है और इसमें थोड़ा समय लग सकता है।",
+    w2: "आपकी जाँच जारी है। नई जानकारी मिलते ही हम आपको बताएँगे।",
+    w3: "आप ऐप बंद करके बाद में लौट सकते हैं। सत्यापन पूरा होने पर हम आपको सूचना देंगे।",
     p4tiny: "आप ऐप बंद कर सकते हैं। पूरा होते ही हम सूचना भेजेंगे।",
     p4btn: "मुझे सूचना दें और ऐप बंद करें",
 
     tag5: "5/5 · पहला कदम",
-    p5h: "आप सत्यापित हैं। रकम चुनें।",
+    p5h: "अपने पहले कदम के लिए तैयार हैं?",
     p5risk: "निवेश बाज़ार जोखिमों के अधीन हैं। रिटर्न की कोई निश्चितता नहीं है और आप अपना कुछ या पूरा पैसा खो सकते हैं।",
-    invest: "{amt} निवेश करें",
-    investDone: "बढ़िया। आपका पहला निवेश तैयार किया जा रहा है।",
+    invest: "{amt} देखें",
+    investDone: "असली ऐप में पुष्टि से पहले आप योजना का विवरण देखेंगे। यह प्रोटोटाइप भुगतान नहीं करता।",
 
     foot: "Sprout पहली बार निवेश करने वालों के लिए एक निवेश ऐप है। निवेश बाज़ार जोखिमों के अधीन हैं। निवेश से पहले सभी योजना संबंधी दस्तावेज़ ध्यान से पढ़ें।"
   }
@@ -179,7 +229,7 @@ function setText(el, key) {
 const chips = document.getElementById("chips");
 const investBtn = document.getElementById("investBtn");
 const investMsg = document.getElementById("investMsg");
-let amount = "₹500";
+let amount = "₹100";
 
 function renderInvest() {
   investBtn.textContent = t("invest").replace("{amt}", amount);
@@ -199,7 +249,9 @@ function applyLang(next) {
 }
 
 document.getElementById("langBtn").addEventListener("click", () => {
-  applyLang(lang === "en" ? "hi" : "en");
+  const next = lang === "en" ? "hi" : "en";
+  applyLang(next);
+  document.getElementById("langBtn").textContent = next === "en" ? "हिं / EN" : "EN / हिं";
 });
 
 // ---------- Desktop/mobile presentation preview ----------
@@ -241,6 +293,19 @@ function goTo(n) {
 document.querySelectorAll("[data-goto]").forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
+    if (el.dataset.goto === "2" && el.closest("#screen-1")) {
+      const mobileHint = document.getElementById("mobileHint");
+      if (!/^\d{10}$/.test(mobile.value)) {
+        mobileHint.className = "field-hint status-error";
+        mobile.setAttribute("aria-invalid", "true");
+        setText(mobileHint, "mobileBad");
+        mobile.focus();
+        return;
+      }
+      mobileHint.className = "field-hint";
+      mobile.setAttribute("aria-invalid", "false");
+      setText(mobileHint, "p1tiny");
+    }
     goTo(el.dataset.goto);
   });
 });
@@ -259,6 +324,12 @@ document.getElementById("startBtn").addEventListener("click", (e) => {
 // ---------- Screen 1: digits only ----------
 mobile.addEventListener("input", () => {
   mobile.value = mobile.value.replace(/\D/g, "");
+  const mobileHint = document.getElementById("mobileHint");
+  if (mobileHint.dataset.i18n === "mobileBad") {
+    mobileHint.className = "field-hint";
+    mobile.setAttribute("aria-invalid", "false");
+    setText(mobileHint, "p1tiny");
+  }
 });
 
 // ---------- Screen 2: remind me later ----------
@@ -272,34 +343,26 @@ const panHint = document.getElementById("panHint");
 const PAN_RE = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
 
 function showPan(key, cls) {
-  panHint.className = "tiny" + (cls ? " " + cls : "");
+  panHint.className = "field-hint" + (cls ? " " + cls : "");
+  pan.setAttribute("aria-invalid", String(key === "panBad"));
   setText(panHint, key);
 }
 
 pan.addEventListener("input", () => {
   pan.value = pan.value.toUpperCase();
   if (pan.value.length < 10) showPan("panFmt");
-  else if (PAN_RE.test(pan.value)) showPan("panOk", "tiny-good");
-  else showPan("panBad", "tiny-bad");
+  else if (PAN_RE.test(pan.value)) showPan("panOk", "status-good");
+  else showPan("panBad", "status-error");
 });
 
 document.getElementById("panBtn").addEventListener("click", () => {
   if (PAN_RE.test(pan.value)) {
     goTo(4);
   } else {
-    showPan("panBad", "tiny-bad");
+    showPan("panBad", "status-error");
     pan.focus();
   }
 });
-
-// ---------- Screen 4: rotating messages so it never looks frozen ----------
-const waitMsg = document.getElementById("waitMsg");
-const waitKeys = ["w1", "w2", "w3"];
-let waitIndex = 0;
-setInterval(() => {
-  waitIndex = (waitIndex + 1) % waitKeys.length;
-  setText(waitMsg, waitKeys[waitIndex]);
-}, 5000);
 
 // ---------- Screen 5: pick an amount, then invest ----------
 chips.addEventListener("click", (e) => {
